@@ -37,6 +37,7 @@ This document provides a concise reference for all lints supported by **soroban-
 | `unbounded_recursion` | warn | unbounded recursion driven by caller-supplied input | [Link](lints/unbounded_recursion.md) |
 | `unwrap_on_storage_get` | warn | unwrap or expect directly on a storage read — panics on a missing or expired key | [Link](lints/unwrap_on_storage_get.md) |
 | `vec_where_slice_could_be_used` | warn | soroban_sdk::Vec passed by value where a native Rust slice would suffice | [Link](lints/vec_where_slice_could_be_used.md) |
+| `val_conversion_chain` | warn | a value shuttled through `Val` three or more times across a binding chain | [Link](lints/val_conversion_chain.md) |
 | `soroban_inefficient_bytes_concat` | warn | inefficient Bytes concatenation inside a loop | [Link](lints/soroban_inefficient_bytes_concat.md) |
 | `duplicate_storage_key_construction` | warn | constructs the same storage key expression in multiple function bodies | [Link](lints/duplicate_storage_key_construction.md) |
 | `option_wrapping_in_storage` | warn | stores an Option<T> in storage where the key already models absence | [Link](lints/option_wrapping_in_storage.md) |

@@ -34,7 +34,6 @@ adapting to the pinned `nightly-2026-04-16` rustc API (the usual drift:
 | `redundant_val_conversion` | `1aa0baf` |
 | `std_collection_in_contract` | `a77f614` |
 | `temporary_storage_for_persistent_data` | `ed0d988` |
-| `val_conversion_chain` | `e9f434b` |
 
 The remaining five never had an implementation in this repository at all — the
 fixture is the whole specification, and the pass has to be written:
