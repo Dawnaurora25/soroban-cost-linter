@@ -138,10 +138,8 @@ impl<'hir> Visitor<'hir> for BufferGrowthVisitor {
                         self.grew_since_reset = false;
                         self.reset_seen = true;
                     }
-                    method if BUFFER_GROWTH_METHODS.contains(&method) => {
-                        if !self.reset_seen {
-                            self.grew_since_reset = true;
-                        }
+                    method if BUFFER_GROWTH_METHODS.contains(&method) && !self.reset_seen => {
+                        self.grew_since_reset = true;
                     }
                     _ => {}
                 }
