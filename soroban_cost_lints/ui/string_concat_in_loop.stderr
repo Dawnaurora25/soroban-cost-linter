@@ -16,3 +16,4 @@ LL |         let _ = String::from_bytes(&env, bytes.as_slice()); // Should Warn
    = help: b$DIRld the byte buffer inside the loop and construct the String once afterwards
 
 warning: 2 warnings emitted
+
