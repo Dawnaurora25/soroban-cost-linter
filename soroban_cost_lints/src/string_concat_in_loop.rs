@@ -149,7 +149,7 @@ impl<'hir> Visitor<'hir> for BufferGrowthVisitor {
                 self.reset_seen = true;
             }
             ExprKind::AssignOp(op, target, _) if self.target_is_buffer(target) => {
-                if op.node == rustc_hir::BinOpKind::Add {
+                if op.node == rustc_hir::AssignOpKind::AddAssign {
                     if !self.reset_seen {
                         self.grew_since_reset = true;
                     }
